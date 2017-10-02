@@ -17,13 +17,15 @@ const argv = require('yargs')
 console.log(argv.dir);
 console.log(argv.out);
 
-fs.appendFileSync(argv.out, 'Path,File Name,Test Type,Test Number,Line Number,It Statement,Describe Statement\n');    
+//if file exists, ask to overwite; for now, just overwrite
 
-glob(`${argv.dir}/**/*.js`, {"ignore":[`${argv.dir}/**/node_modules/**`]}, function (er, fileNames) {
- // files is an array of filenames. 
- // If the `nonull` option is set, and nothing 
- // was found, then files is ["**/*.js"] 
- // er is an error object or null. 
+fs.writeFile(argv.out, 'Path,"File Name","Test Type","Test Number In File","Line Number",Implemented,Should,Describe\n', function (err) {
+    if (err) {
+        return console.log("Error writing file: " + err);
+    }
+});    
+
+glob(`${argv.dir}/**/*spec.js`, {"ignore":[`${argv.dir}/**/node_modules/**`]}, function (er, fileNames) {
     
     fileNames.forEach(function(fileName) {
     const rl = readline.createInterface({
@@ -36,6 +38,7 @@ glob(`${argv.dir}/**/*.js`, {"ignore":[`${argv.dir}/**/node_modules/**`]}, funct
     var fileNameOnly = fileNamesArray.pop();
     var pathWithinDir = fileNamesArray.join('/');
     
+    //determie test type
     var testType = 'Unknown';
     if (fileName.match('comp.spec.js')) {
         testType = 'Component test';
@@ -43,16 +46,20 @@ glob(`${argv.dir}/**/*.js`, {"ignore":[`${argv.dir}/**/node_modules/**`]}, funct
         testType = 'Unit test';
     }
     
-    extractTestNames(rl, fileName, testType, pathWithinDir, fileNameOnly);
-    //console.log(`Done with file ${fileName}`);
+    extractTests(rl, fileName, testType, pathWithinDir, fileNameOnly, function (testsInFile){
+        console.log(`${testsInFile.itCount} its and ${testsInFile.ntCount} nts in file ${fileName}`);
+    });
+    //console.log(`${testsInFile.itCount} its and ${testsInFile.ntCount} nts in file ${fileName}`);
 });
 })
 
-const extractTestNames = (rl, fileName, testType, pathWithinDir, fileNameOnly) => {
+const extractTests = (rl, fileName, testType, pathWithinDir, fileNameOnly, callback) => {
     var lineNumber = 0;
-    var testNumber = 0;
+    var itCounter = 0;
+    var ntCounter = 0;
     var describeStatement = 'Unknown';
     var itStatement = 'Unknown';
+    var ntStatement = 'Unknown';
     var quoteUsed = '';
     
     rl.on('line', (line) => {
@@ -70,7 +77,7 @@ const extractTestNames = (rl, fileName, testType, pathWithinDir, fileNameOnly) =
             //console.log(describeStatement);
         }
         if (line.trim().startsWith("it(")) {
-            testNumber++;
+            itCounter++;
             try {
                 quoteUsed = line.trim().match(/\"|\'/g)[0];
                 itStatement = line.split(quoteUsed)[1];
@@ -80,9 +87,42 @@ const extractTestNames = (rl, fileName, testType, pathWithinDir, fileNameOnly) =
             }
             itStatement = itStatement.replace(',','');
             //console.log(`File ${fileName}, Test ${testNumber}, Line ${lineNumber}, quote ${quoteUsed}: ${shouldStatement}`);
-            fs.appendFileSync(argv.out, `${pathWithinDir},${fileNameOnly},${testType},${testNumber},${lineNumber},${itStatement},${describeStatement}\n`);
+            fs.appendFile(argv.out, `${pathWithinDir},${fileNameOnly},${testType},${itCounter},${lineNumber},Implemented,${itStatement},${describeStatement}\n`, function (err) {
+                if (err) {
+                    return console.log("Error appending file: " + err);
+                }
+            });
         }
-    });
+        if (line.trim().startsWith("nt(")) {
+            ntCounter++;
+            try {
+                quoteUsed = line.trim().match(/\"|\'/g)[0];
+                ntStatement = line.split(quoteUsed)[1];
+            } catch (e) {
+                console.log(`Error in file: ${fileName}, line # ${lineNumber}`);
+                ntStatement = '### Error parsing the nt statement ###';
+            }
+            ntStatement = ntStatement.replace(',','');
+            //console.log(`File ${fileName}, Test ${testNumber}, Line ${lineNumber}, quote ${quoteUsed}: ${shouldStatement}`);
+            fs.appendFile(argv.out, `${pathWithinDir},${fileNameOnly},${testType},${ntCounter},${lineNumber},Necessary,${ntStatement},${describeStatement}\n`, function (err) {
+                if (err) {
+                    return console.log("Error appending file: " + err);
+                }
+            });
+        }
+    }).on('close', () => {
+        //console.log('Have a great day!');
+        //function () {
+        //console.log(itCounter, ntCounter);
+        var testsInFile = {
+            itCount: itCounter,
+            ntCount: ntCounter
+        };
+        //console.log(`tests in file before return: ${testsInFile.itCount}, ${testsInFile.ntCount}`);
+        callback(testsInFile);
+        //return testsInFile;
+        //process.exit(0);
+      });
 }
 
-//add file write error handling
+//add file write error handling - Done
