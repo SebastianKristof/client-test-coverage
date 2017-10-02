@@ -1,0 +1,282 @@
+Path,File Name,Test Type,Test Number,Line Number,It Statement,Describe Statement
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,1,7,has a initial table name,Add Manual Data Component
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,2,14,shows validation error if table name input is empty,Add Manual Data Component
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,3,24,adds new tableModel to the loadModel,Add Manual Data Component
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,4,35,disables 'Add data' button if tableName is empty,Add Manual Data Component
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,5,44,makes sure that field names are unique after clicking 'Add data',Add Manual Data Component
+./directives/add-manual-data/fixtures,add-manual-data.comp.spec.js,Component test,6,57,makes sure that table names are unique after clicking 'Add data',Add Manual Data Component
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,1,245,should have fieldtype general,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,2,256,should have 4 options in the field type dropdown,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,3,267,should display the correct options in the dropdown ,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,4,280,should display the correct view after selecting date ,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,5,292,should have the correct items in the dateInputFormat list,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,6,309,should have the correct items in the displayInputFormat list,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,7,325,should display the correct view after setting geodata ,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,8,336,should be able to select different geodata types ,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,9,352,should display the correct view after selecting field type time ,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,10,364,should have the correct items in the timestampFormat lists,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,11,383,should close the dialog and go back to default after pressing cancel 1,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,12,393,should close the dialog and go back to default after pressing cancel 2,Data Manager Table Editor Classification menu
+./directives/ds-add-calculated-field/fixture,ds-add-calculated-field.comp.spec.js,Component test,1,39,should display a blank simple expression builder control with header,Add Calculated Field Panel
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,1,54,should paste raw text to column header,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,2,60,should paste raw text to first cell,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,3,66,should paste multiline data,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,4,73,should paste multi line and multi column data,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,5,82,should copy multi line and multi column data by selecting cells,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,6,90,should copy multi line and multi column data by selecting column headers,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,7,99,should correctly paste cells containing newlines inside the cell,Edit Grid Data Handler
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,1,14,is 'China' at index (0 1),data functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,2,28,selects cell and highlights the cell,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,3,34,selects a range of cells and highlights all of them,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,4,63,selects a reverse range of cells and highlights all of them,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,5,92,selects a horizontal range of cells and highlights all of them,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,6,111,selects a vertical range of cells and highlights all of them,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,7,133,selects header and highlights all the cells,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,8,141,selects row and highlights all the cells,selection functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,9,157,changes cell 'China' to 'Canada',editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,10,163,should not change cell value if user presses escape,editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,11,169,changes header 'Rank' to 'Speed',editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,12,175,should not change header value if user presses escape,editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,13,181,should not change header value if user clears it,editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,14,195,correctly counts the number of columns and rows,meta-data functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,15,238,deletes single cell,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,16,244,deletes a range of cells,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,17,257,deletes entire column,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,18,263,deletes entire row,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,19,269,can delete the last row the last normal column, or the placeholder column,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,20,298,can delete any cell in the grid,delete functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,21,335,edits cell on the right when user presses TAB,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,22,357,edits cell on the right when user presses SHIFT+TAB,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,23,378,edits the cell below when user presses ENTER,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,24,401,edits the cell above when user presses SHIFT+ENTER,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,25,417,edits single selected cell when user presses ENTER,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,26,429,selects previous cell in the row when user presses SHIFT+TAB,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,27,441,selects next cell in the row when user presses TAB,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,28,453,selects previous cell in the row when user presses LEFT arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,29,465,selects next cell in the row when user presses RIGHT arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,30,477,selects cell on the previous row when user presses LEFT arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,31,499,selects cell on the next row when user presses RIGHT arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,32,516,selects next cell in the column when user presses DOWN arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,33,533,selects previous cell in the column when user presses UP arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,34,550,selects next row when user presses DOWN arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,35,562,selects previous row when user presses UP arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,36,574,deletes selected cells by pressing backspace,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,37,590,backspace deletes the last row the last normal column, and the placeholder column,keyboard shortcuts
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,1,7,should have initial field names,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,2,15,should have initial row data,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,3,45,should rename field,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,4,60,should not have duplicated field name,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,5,76,should not have duplicated field name with calculated field,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,6,92,should rename row data,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,7,107,should add new field ,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,8,122,should add new row ,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,9,137,should delete Field,Edit Manual Data Component
+./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,10,147,should delete row data ,Edit Manual Data Component
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,1,52,should display a blank simple expression builder control,Simple Expression Builder
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,2,61,should display simple expression builder control with 2 tokens,Simple Expression Builder
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,3,71,should start with 2 tokens then delete one and end up wit 1 expression token,Simple Expression Builder
+./directives/ui-components,dm-ui-blocker.spec.js,Unit test,1,30,should not show a message when a message is not defined,DM UI Blocker
+./directives/ui-components,dm-ui-blocker.spec.js,Unit test,2,35,should show a message when a message is defined,DM UI Blocker
+./models,associations-model.spec.js,Unit test,1,33,should have no associationNodes in loadModel,core
+./models,associations-model.spec.js,Unit test,2,39,should have one associationNodes in the LoadModel,core
+./models,associations-model.spec.js,Unit test,3,48,should remove associationNodeModel if needed,core
+./models,associations-model.spec.js,Unit test,4,66,should remove associationNodeModel if fields are not longer associated,core
+./models,associations-model.spec.js,Unit test,5,96,should add associationNodeModel if new fields associate,core
+./models,associations-model.spec.js,Unit test,6,121,should have no links,core
+./models,associations-model.spec.js,Unit test,7,129,should not throw error if table has no fields,core
+./models,associations-model.spec.js,Unit test,8,135,should have connnectionNode for tables with associations,core
+./models,associations-model.spec.js,Unit test,9,150,should have two links to a connectionNode between two tables,core
+./models,calendar-model.spec.js,Unit test,1,16,should have a getCalendar,CalendarModel getCalendar
+./models,calendar-model.spec.js,Unit test,2,19,should return the model when invoked,CalendarModel getCalendar
+./models,calendar-model.spec.js,Unit test,3,22,should be equal to the original,CalendarModel getCalendar
+./models,load-model-associations-concat.spec.js,Unit test,1,43,should have no associations initially,loadModelAssociations
+./models,load-model-associations-concat.spec.js,Unit test,2,49,Associate a concatenated table with a regular table,loadModelAssociations
+./models,load-model-associations-rename.spec.js,Unit test,1,43,AWR getAssociationsForTable - simple association case,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,2,83,AWR getAssociationsBetweenTables - simple association case,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,3,111,AWR setAssociation - simple association case,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,4,163,AWR setAssociation - compound case,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,5,230,getDefaultAssociationName - compound case,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,6,256,AWR breakAssociation,loadModelAssociationsRename
+./models,load-model-associations-rename.spec.js,Unit test,7,302,setAssociation - second call should remove previous association,loadModelAssociationsRename
+./models,load-model-transformations.spec.js,Unit test,1,34,should return cross table query,Cross Table
+./models,query-generator.spec.js,Unit test,1,28,should detect load model is valid with cross table queries,Query Generator
+./models,query-generator.spec.js,Unit test,2,62,should detect load model is valid or invalid,Query Generator
+./services,ds-expression-lexer-service.spec.js,Unit test,1,10,should not tokenize an empty string,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,2,15,should tokenize all valid symbols,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,3,34,should throw error if no valid symbol,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,4,52,it should tokenize integer numbers,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,5,60,it should tokenize decimal numbers,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,6,68,it should tokenize negative numbers,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,7,79,it should tokenize strings,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,8,91,it should tokenize strings with any characters,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,9,103,it should throw error with incomplete strings,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,10,113,it should tokenize string concatenation,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,11,123,it should like string concatenation,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,12,133,it should throw error with incomplete fields,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,13,143,it should tokenize identifiers,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,14,153,it should tokenize field containing any character when embracing in [ ] (besides \,Dataspace expression lexer
+./services,ds-expression-lexer-service.spec.js,Unit test,15,165,it should tokenize field containing any character when embracing \,Dataspace expression lexer
+./services,ds-expression-parser-service.spec.js,Unit test,1,10,should not parse an empty string,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,2,16,should parse simple mathematical expressions,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,3,44,should give error when parsing an mathematical expresison missing right side,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,4,55,should give error when parsing a concat expresison missing right side,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,5,66,should give error when parsing an operator only,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,6,77,should parse negated numbers,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,7,87,should parse double negated numbers,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,8,104,should throw error when * operand is missing left term,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,9,115,should parse strings concatenations,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,10,129,should parse strings likes,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,11,143,should parse number within a parenthesis,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,12,152,should parse expression within parenthesis,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,13,168,should parse expressions containing parenthesis,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,14,194,should throw error when parsing expression within missing right parenthesis,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,15,205,should throw error when parsing expression within missing left parenthesis,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,16,216,should throw error when & operand is missing left term,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,17,227,should parse a function without params,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,18,237,should parse a function with one param,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,19,250,should parse a function with several params,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,20,286,should parse functions containing expressions as input params,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,21,305,should parse expressions containing functions and operators,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,22,320,should parse expressions containing if and =,Dataspace expression parser
+./services,ds-expression-parser-service.spec.js,Unit test,23,333,should parse expressions containing if and <=,Dataspace expression parser
+./services,ds-expression-service.spec.js,Unit test,1,10,should compile to an empty AST for an empty string,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,2,21,should compile a correct expression without errors,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,3,29,should give compile error for missing function,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,4,38,should give compile error for several missing functions,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,5,52,should give compile error for missing fields,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,6,64,should give list of used functions for correct expressions,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,7,78,should give the field name at the give cursor position,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,8,97,should rename fields,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,9,124,should rename all fields when using toScript according to the fields map,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,10,141,should rename all fields wrapped in mustache tags when using toScript according to the fields map,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,11,156,should give error if using invalid number of function arguments,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,12,165,should not give error if using a correct number of arguments some of them being optional,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,13,189,should not give error if using a correct number of arguments being variable,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,14,209,should compile functions with recursive arguments signatures,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,15,235,should give error if using incompatible function signature,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,16,237,should give error if mixing wrong datatypes,Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,17,239,it should not put regular field names into [ ],Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,18,246,it should put numeric field names into [ ],Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,19,253,it should escape field names that contains ],Dataspace expression service
+./services,ds-expression-service.spec.js,Unit test,20,269,it should un-escape field names escaped with ],Dataspace expression service
+./services,ds-validation-service.spec.js,Unit test,1,41,should give error if name is empty,validateFieldName
+./services,ds-validation-service.spec.js,Unit test,2,48,should give error if name colliding with system names,validateFieldName
+./services,ds-validation-service.spec.js,Unit test,3,64,should give error if name includes illegal characters,validateFieldName
+./services,ds-validation-service.spec.js,Unit test,4,88,should not give error if name unique and uses legal characters,validateFieldName
+./services,ds-validation-service.spec.js,Unit test,5,103,should give error if name is empty,validateAssociationName
+./services,ds-validation-service.spec.js,Unit test,6,110,should give error if name colliding with system names,validateAssociationName
+./services,ds-validation-service.spec.js,Unit test,7,119,should give error if name includes illegal characters,validateAssociationName
+./services,ds-validation-service.spec.js,Unit test,8,143,should not give error if name unique and uses legal characters,validateAssociationName
+./services,ds-validation-service.spec.js,Unit test,9,151,should give error if name is empty,validateTableName
+./services,ds-validation-service.spec.js,Unit test,10,158,should give error if name includes illegal characters,validateTableName
+./services,ds-validation-service.spec.js,Unit test,11,160,should not give error if name unique and uses legal characters,validateTableName
+./services,ds-validation-service.spec.js,Unit test,12,166,should give error if name not unique,validateTableName
+./services,manual-add-data-service.spec.js,Unit test,1,12,should create fields of just unique names,Add manual data service
+./services,manual-add-data-service.spec.js,Unit test,2,44,should create fields of just unique names and respect the read only names,Add manual data service
+./services,straight-table-dimension-builder.spec.js,Unit test,1,15,should return one dimension with name and label,Straight Table Dimension builder
+./services,straight-table-dimension-builder.spec.js,Unit test,2,33,should return one dimension with expression and label,Straight Table Dimension builder
+./templating,template-runner-spec.js,Unit test,1,15,should have grid as the default view mode,x
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,1,14,should handle empty an load model,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,2,25,should handle a single table,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,3,51,should set the correct status on a table,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,4,108,should handle 2 unassociated tables without recommendations,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,5,140,should handle 2 associated tables without recommendations,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,6,177,should handle 2 unassociated tables with recommendations,Bubble Data Provider
+./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,7,225,should handle 2 associated tables with recommendations,Bubble Data Provider
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,1,91,should display the workbench SVG with bubbles,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,2,104,should display a link between two associated bubbles,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,3,112,should display selected bubble when clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,4,129,should display selected link when clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,5,143,should display selected hub when clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,6,157,should unselect bubble when canvas is clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,7,175,should zoom out or in when zoom out or in button is clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,8,208,should display three links between three associated bubbles,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,9,221,should create a central hub and display links between three commonly-associated bubbles,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,10,254,should create a central hub that conflicts with the name of an existing table,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,11,287,should display the 4 different bubble statuses,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,12,311,should display the 3 different bubble types,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,13,363,should display the toolbar buttons in the workbench,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,14,373,should display the add button bubble,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,15,382,should fire the corresponding event for auto associate (magic wand),Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,16,390,should fire the corresponding event for add data,Data Manager Bubbles Component
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,1,51,is created,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,2,55,should be hidden and disabled when nothing is selected,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,3,61,should be disabled when the grid editor is open,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,4,73,should be visible but disabled when association editor is open,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,5,81,should be visible and enabled when something is selected and pane is active,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,6,88,should be hidden but enabled when something is selected and pane is inactive in the overview,Data Manager Preview Service
+./views/data-manager/data-manager-preview,data-manager-preview-service.spec.js,Unit test,7,96,should be visible and enabled when something is selected and pane is inactive in the bubbles view,Data Manager Preview Service
+./views/data-manager/data-manager-preview/panels/associations-panel/fixture,association-panel.comp.spec.js,Component test,1,8,should it should have right number of recommendation chicklets,Association Panel
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,1,25,should not return any recommendations with no association data or existing associations,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,2,33,should not return any recommendations with no association data but an existing association,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,3,48,should return a good recommendation with good association data,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,4,64,should return multiple good recommendation with good association data,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,5,108,should return good and bad recommendation with association data and existing associations,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,6,164,should generate a custom association recommendation for a table pair without association data or existing associations,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,7,173,should generate a bad association recommendation for a table pair without association data but with an existing associations,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,8,189,should generate a bad association recommendation for a table pair with association data and with an existing custom associations,Recommendation Handler
+./views/data-manager/data-manager-preview/panels/associations-panel,recommendation-handler.spec.js,Unit test,9,210,should include a good association recommendation for a table pair with association data but and an existing associations,Recommendation Handler
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,1,35,should treat a unique field name as valid,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,2,41,should treat a duplicated field name as invalid,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,3,47,should ignore field that is not selected even if its name is a duplicate,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,4,56,should find nodes by ID,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,5,81,should get all leaf nodes,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,6,100,should generate a token list from a tree,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/field-split-select,field-split-helper-service.spec.js,Unit test,7,138,should delete delimiter token without repositioning other tokens,Field Split helper service tests
+./views/data-manager/editor-details-pane/components/map-values/fixture,map-values.comp.spec.js,Component test,1,8,should show replace card empty messages,Data Manager Mapping action component
+./views/data-manager/editor-details-pane/components/map-values/fixture,map-values.comp.spec.js,Component test,2,15,should make sure that the distinct value search gets the right search result,Data Manager Mapping action component
+./views/data-manager/editor-details-pane/components/map-values/fixture,map-values.comp.spec.js,Component test,3,34,should add clicked/selected distinct values to replacement group,Data Manager Mapping action component
+./views/data-manager/editor-details-pane/components/map-values/fixture,map-values.comp.spec.js,Component test,4,57,should remove clicked/selected distinct values from replacement group,Data Manager Mapping action component
+./views/data-manager/editor-details-pane/components/map-values,map-values-service.spec.js,Unit test,1,23,should create a mapped values for DPS mapping transformation,Data Manager Mapping Values Service
+./views/data-manager/editor-details-pane/components/map-values,map-values-service.spec.js,Unit test,2,42,should getDistinctValues from chart table data transformation object,Data Manager Mapping Values Service
+./views/data-manager/editor-details-pane/components/map-values,map-values-service.spec.js,Unit test,3,54,should create a chart data for DPS mappedValues transformation object,Data Manager Mapping Values Service
+./views/data-manager/editor-details-pane/components/map-values,map-values-service.spec.js,Unit test,4,66,should create a chart data field,Data Manager Mapping Values Service
+./views/data-manager/editor-details-pane/components/map-values,map-values-service.spec.js,Unit test,5,78,should create a chart data and map whitespaces (wherever we have a null object label it should be changed to undefined),Data Manager Mapping Values Service
+./views/data-manager/editor-details-pane/custom/fixtures,value-ranges.comp.spec.js,Component test,1,7,render a value ranges chart which show a minimum maximum, and has an identical median and average,Value Ranges
+./views/data-manager/editor-details-pane/custom/fixtures,value-ranges.comp.spec.js,Component test,2,41,render a value ranges chart which show a minimum maximum, median and average in the correct position,Value Ranges
+./views/data-manager/editor-details-pane/custom/fixtures,value-ranges.comp.spec.js,Component test,3,91,render a value ranges chart where the median and maximum are the same,Value Ranges
+./views/data-manager/editor-details-pane/custom/fixtures,value-ranges.comp.spec.js,Component test,4,138,render a value ranges chart where the minimum and median are the same,Value Ranges
+./views/data-manager/editor-details-pane/custom/fixtures,value-ranges.comp.spec.js,Component test,5,185,render a value ranges chart with formatted values not numeric values,Value Ranges
+./views/data-manager/editor-details-pane,field-card-provider.spec.js,Unit test,1,20,should create a summary card with a single classification,Field Card Provider
+./views/data-manager/editor-details-pane,field-card-provider.spec.js,Unit test,2,56,should create a summary card with multiple classifications,Field Card Provider
+./views/data-manager/editor-details-pane,field-card-provider.spec.js,Unit test,3,96,should create a summary card and a single action card,Field Card Provider
+./views/data-manager/editor-details-pane,field-card-provider.spec.js,Unit test,4,126,should create a summary card and one action card for multiple actions,Field Card Provider
+./views/data-manager/editor-details-pane,field-card-provider.spec.js,Unit test,5,164,should create a summary card and one action card with multiple tabs for each action,Field Card Provider
+./views/data-manager/editor-details-pane,field-visualizations-provider.spec.js,Unit test,1,22,should create a recommendation with a single classification,Field Visualization Provider
+./views/data-manager/editor-details-pane,field-visualizations-provider.spec.js,Unit test,2,57,should create a recommendation with multiple classifications,Field Visualization Provider
+./views/data-manager/editor-details-pane,field-visualizations-provider.spec.js,Unit test,3,116,should create a recommendation with a single classification with actions,Field Visualization Provider
+./views/data-manager/editor-details-pane,field-visualizations-provider.spec.js,Unit test,4,177,should create a recommendation with multiple classification with different actions,Field Visualization Provider
+./views/data-manager/editor-details-pane,field-visualizations-provider.spec.js,Unit test,5,246,should create a recommendation with a single classification with an edit buckets action,Field Visualization Provider
+./views/data-manager/editor-details-pane/fixtures,editor-details-pane.comp.spec.js,Component test,1,8,should have the instance delimiter size increase,Data Manager Editor Details Pane
+./views/data-manager/editor-details-pane/fixtures,editor-details-pane.comp.spec.js,Component test,2,43,should have the position delimiter size increase,Data Manager Editor Details Pane
+./views/data-manager/editor-details-pane/fixtures,editor-details-pane.comp.spec.js,Component test,3,79,should change the cards and their content when switching classification,Data Manager Editor Details Pane
+./views/data-manager/editor-details-pane/fixtures,editor-details-pane.comp.spec.js,Component test,4,129,should have circle chart with proper values,Data Manager Editor Details Pane
+./views/data-manager/editor-details-pane/fixtures,editor-details-pane.comp.spec.js,Component test,5,145,should have more than 1 circle charts for mixed data,Data Manager Editor Details Pane
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,1,138,should display a table card,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,2,146,should show the normal table name and source and number of fields,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,3,169,should show pending add on normal table,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,4,176,should show pending delete on normal table and no action buttons available,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,5,187,should show pending update on normal table,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,6,195,should show refresh icon on a pending update table,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,7,207,should show scripted table name source and number of fields,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,8,238,should show normal concatenated tables number of concatenated tables, number of fields and table name,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,9,261,should show the pending add concatenated table number of concatenated tables, table name and status update,Data Manager Overview Table
+./views/data-manager/fixtures,data-manager-table.comp.spec.js,Component test,10,287,should show the pending update icon on a pending update concatenated table,Data Manager Overview Table
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,1,12,Table lineage on simple table,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,2,36,Table Lineage on concat table,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,3,64,Table lineage on a scripted table,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,4,78,Table lineage on a table from an ole db connector want to make sure we show connection info,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,5,91,Table lineage on a pivoted table make sure we show the input and output fields,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,6,125,Field Lineage on concat field,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,7,151,Field Lineage on a calculated field in a concat query,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,8,175,Field Lineage on a field with both a map values and reorder,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,9,209,Field Lineage on a field with geo data,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,10,242,Field Lineage on an output field of an unpivot table,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,11,277,Field Lineage on an output field with a long expression make sure the dialog does not get a scrollbar,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,12,287,Field lineage on a split field,Data Manager Lineage  View
+./views/data-manager/lineage/fixtures,data-manager-lineage.comp.spec.js,Component test,13,310,Field lineage on a split field with multiple splits on the same delimiter value,Data Manager Lineage  View
+./views/wizard/analyze-model,analyze-model-results-adapter.spec.js,Unit test,1,12,should handle a null or empty result,Analyze Model Results Adapter
+./views/wizard/analyze-model,analyze-model-results-adapter.spec.js,Unit test,2,26,should handle canLoad flag,Analyze Model Results Adapter
+./views/wizard/analyze-model,analyze-model-results-adapter.spec.js,Unit test,3,44,should handle circular reference warnings,Analyze Model Results Adapter
+./views/wizard/analyze-model,analyze-model-results-adapter.spec.js,Unit test,4,55,should handle synthetic key warnings,Analyze Model Results Adapter
+./views/wizard/analyze-model,analyze-model-results-adapter.spec.js,Unit test,5,75,should determine the correct status,Analyze Model Results Adapter
