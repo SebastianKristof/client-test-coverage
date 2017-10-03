@@ -9,7 +9,7 @@ const glob = require("glob");
 const argv = require('yargs')
     .usage('Usage: $0 --dir [starting directory] --out [output file prefix]')
     //.demandOption(['dir','out'])
-    .default ('dir', '.')
+    .default ('dir', '~/GitHub/sense-client/web/assets/hldm/')
     .default ('out', 'tests_')
     .argv;
 
@@ -56,7 +56,9 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
     
         extractTests(rl, fileName, testType, pathWithinDir, fileNameOnly, function (testsInFile){
             //console.log(`${testsInFile.itCount} its and ${testsInFile.ntCount} nts in file ${fileName}`);
-            var percentImplemented = (testsInFile.ntCount >= testsInFile.itCount) ? testsInFile.itCount/testsInFile.ntCount*100 : 'nt outdated';
+            
+            //put some counters in here so we get counts of 100%, <100%, and not ready
+            var percentImplemented = (testsInFile.ntCount >= testsInFile.itCount) ? testsInFile.itCount/testsInFile.ntCount*100 : 'nt not ready';
             fs.appendFile(outFileStats, `${pathWithinDir},${fileNameOnly},${testsInFile.itCount},${testsInFile.ntCount},${percentImplemented}\n`, function (err) {
                 if (err) {
                     return console.log("Error appending file: " + err);
@@ -64,6 +66,9 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
             });
         });
     });
+    console.log(`Glob processed ${fileNames.length} files`);
+}).on('end', () => {
+    console.log(`Glob finished`);
 });
 
 const extractTests = (rl, fileName, testType, pathWithinDir, fileNameOnly, callback) => {

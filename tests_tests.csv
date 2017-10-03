@@ -9,8 +9,8 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,2,256,Implemented,should have 4 options in the field type dropdown,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,3,267,Implemented,should display the correct options in the dropdown ,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,4,280,Implemented,should display the correct view after selecting date ,Data Manager Table Editor Classification menu
-./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,5,292,Implemented,should have the correct items in the dateInputFormat list,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,6,309,Implemented,should have the correct items in the displayInputFormat list,Data Manager Table Editor Classification menu
+./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,5,292,Implemented,should have the correct items in the dateInputFormat list,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,7,325,Implemented,should display the correct view after setting geodata ,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,8,336,Implemented,should be able to select different geodata types ,Data Manager Table Editor Classification menu
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,9,352,Implemented,should display the correct view after selecting field type time ,Data Manager Table Editor Classification menu
@@ -19,9 +19,9 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/classification-menu/fixtures,classification-menu.comp.spec.js,Component test,12,393,Implemented,should close the dialog and go back to default after pressing cancel 2,Data Manager Table Editor Classification menu
 ./directives/ds-add-calculated-field/fixture,ds-add-calculated-field.comp.spec.js,Component test,1,39,Implemented,should display a blank simple expression builder control with header,Add Calculated Field Panel
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,1,54,Implemented,should paste raw text to column header,Edit Grid Data Handler
+./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,2,60,Implemented,should paste raw text to first cell,Edit Grid Data Handler
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,3,66,Implemented,should paste multiline data,Edit Grid Data Handler
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,4,73,Implemented,should paste multi line and multi column data,Edit Grid Data Handler
-./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,2,60,Implemented,should paste raw text to first cell,Edit Grid Data Handler
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,5,82,Implemented,should copy multi line and multi column data by selecting cells,Edit Grid Data Handler
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,6,90,Implemented,should copy multi line and multi column data by selecting column headers,Edit Grid Data Handler
 ./directives/ds-edit-grid,edit-grid-data-handler.spec.js,Unit test,7,99,Implemented,should correctly paste cells containing newlines inside the cell,Edit Grid Data Handler
@@ -42,9 +42,9 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,8,141,Implemented,selects row and highlights all the cells,selection functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,9,157,Implemented,changes cell 'China' to 'Canada',editing functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,10,163,Implemented,should not change cell value if user presses escape,editing functionality
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,11,169,Implemented,changes header 'Rank' to 'Speed',editing functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,12,175,Implemented,should not change header value if user presses escape,editing functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,13,181,Implemented,should not change header value if user clears it,editing functionality
-./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,11,169,Implemented,changes header 'Rank' to 'Speed',editing functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,14,195,Implemented,correctly counts the number of columns and rows,meta-data functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,15,238,Implemented,deletes single cell,delete functionality
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,16,244,Implemented,deletes a range of cells,delete functionality
@@ -59,8 +59,8 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,25,417,Implemented,edits single selected cell when user presses ENTER,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,26,429,Implemented,selects previous cell in the row when user presses SHIFT+TAB,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,27,441,Implemented,selects next cell in the row when user presses TAB,keyboard shortcuts
-./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,29,465,Implemented,selects next cell in the row when user presses RIGHT arrow key,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,28,453,Implemented,selects previous cell in the row when user presses LEFT arrow key,keyboard shortcuts
+./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,29,465,Implemented,selects next cell in the row when user presses RIGHT arrow key,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,30,477,Implemented,selects cell on the previous row when user presses LEFT arrow key,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,31,499,Implemented,selects cell on the next row when user presses RIGHT arrow key,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,32,516,Implemented,selects next cell in the column when user presses DOWN arrow key,keyboard shortcuts
@@ -69,9 +69,6 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,35,562,Implemented,selects previous row when user presses UP arrow key,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,36,574,Implemented,deletes selected cells by pressing backspace,keyboard shortcuts
 ./directives/ds-edit-grid/fixtures,ds-edit-grid.comp.spec.js,Component test,37,590,Implemented,backspace deletes the last row the last normal column, and the placeholder column,keyboard shortcuts
-./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,1,52,Implemented,should display a blank simple expression builder control,Simple Expression Builder
-./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,2,61,Implemented,should display simple expression builder control with 2 tokens,Simple Expression Builder
-./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,3,71,Implemented,should start with 2 tokens then delete one and end up wit 1 expression token,Simple Expression Builder
 ./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,1,7,Implemented,should have initial field names,Edit Manual Data Component
 ./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,2,15,Implemented,should have initial row data,Edit Manual Data Component
 ./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,3,45,Implemented,should rename field,Edit Manual Data Component
@@ -84,6 +81,9 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./directives/edit-manual-data/fixtures,edit-manual-data.comp.spec.js,Component test,10,147,Implemented,should delete row data ,Edit Manual Data Component
 ./directives/ui-components,dm-ui-blocker.spec.js,Unit test,1,30,Implemented,should not show a message when a message is not defined,DM UI Blocker
 ./directives/ui-components,dm-ui-blocker.spec.js,Unit test,2,35,Implemented,should show a message when a message is defined,DM UI Blocker
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,1,52,Implemented,should display a blank simple expression builder control,Simple Expression Builder
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,2,61,Implemented,should display simple expression builder control with 2 tokens,Simple Expression Builder
+./directives/simple-expression-builder/fixture,simple-expression-builder.comp.spec.js,Component test,3,71,Implemented,should start with 2 tokens then delete one and end up wit 1 expression token,Simple Expression Builder
 ./models,associations-model.spec.js,Unit test,1,33,Implemented,should have no associationNodes in loadModel,core
 ./models,associations-model.spec.js,Unit test,2,39,Implemented,should have one associationNodes in the LoadModel,core
 ./models,associations-model.spec.js,Unit test,3,48,Implemented,should remove associationNodeModel if needed,core
@@ -93,8 +93,8 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./models,associations-model.spec.js,Unit test,7,129,Implemented,should not throw error if table has no fields,core
 ./models,associations-model.spec.js,Unit test,8,135,Implemented,should have connnectionNode for tables with associations,core
 ./models,associations-model.spec.js,Unit test,9,150,Implemented,should have two links to a connectionNode between two tables,core
-./models,calendar-model.spec.js,Unit test,2,19,Implemented,should return the model when invoked,CalendarModel getCalendar
 ./models,calendar-model.spec.js,Unit test,1,16,Implemented,should have a getCalendar,CalendarModel getCalendar
+./models,calendar-model.spec.js,Unit test,2,19,Implemented,should return the model when invoked,CalendarModel getCalendar
 ./models,calendar-model.spec.js,Unit test,3,22,Implemented,should be equal to the original,CalendarModel getCalendar
 ./models,load-model-associations-concat.spec.js,Unit test,1,43,Implemented,should have no associations initially,loadModelAssociations
 ./models,load-model-associations-concat.spec.js,Unit test,2,49,Implemented,Associate a concatenated table with a regular table,loadModelAssociations
@@ -190,13 +190,13 @@ Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Shou
 ./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,5,140,Implemented,should handle 2 associated tables without recommendations,Bubble Data Provider
 ./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,6,177,Implemented,should handle 2 unassociated tables with recommendations,Bubble Data Provider
 ./views/data-manager/data-manager-bubbles,data-manager-bubble-data-provider.spec.js,Unit test,7,225,Implemented,should handle 2 associated tables with recommendations,Bubble Data Provider
-./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,2,104,Implemented,should display a link between two associated bubbles,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,1,91,Implemented,should display the workbench SVG with bubbles,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,2,104,Implemented,should display a link between two associated bubbles,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,3,112,Implemented,should display selected bubble when clicked,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,4,129,Implemented,should display selected link when clicked,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,5,143,Implemented,should display selected hub when clicked,Data Manager Bubbles Component
-./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,7,175,Implemented,should zoom out or in when zoom out or in button is clicked,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,6,157,Implemented,should unselect bubble when canvas is clicked,Data Manager Bubbles Component
+./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,7,175,Implemented,should zoom out or in when zoom out or in button is clicked,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,8,208,Implemented,should display three links between three associated bubbles,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,9,221,Implemented,should create a central hub and display links between three commonly-associated bubbles,Data Manager Bubbles Component
 ./views/data-manager/data-manager-bubbles/fixtures,data-manager-bubbles.comp.spec.js,Component test,10,254,Implemented,should create a central hub that conflicts with the name of an existing table,Data Manager Bubbles Component
