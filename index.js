@@ -38,14 +38,16 @@ var fileNamesArray = [];
 
 glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]}, function (er, fileNames) {
     
-    fileNamesArray = fileNames;
+    fileNames.forEach(function(fileName) {
+        fileNamesArray.push(fileName);
+    });
 
 }).on('end', () => {
     console.log(`Glob finished`);
     iterateOverFiles(fileNamesArray, function () {
-    console.log(`Processed ${fileNamesArray.length} files`);
-    //count members of percentImplArray here (100, <100, NaN)
-    console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+        console.log(`Processed ${fileNamesArray.length} files`);
+        //count members of percentImplArray here (100, <100, NaN)
+        console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
 });
     //these guys are not in scope because they are modified from within extractTests()
     //console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
@@ -56,6 +58,7 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
 
 
 const iterateOverFiles = (fileNamesArray, callback) => {
+    
     fileNamesArray.forEach(function(fileName) {
         const rl = readline.createInterface({
             input: fs.createReadStream(fileName)
