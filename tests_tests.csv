@@ -1,2 +1,0 @@
-Path,File_Name,Test_Type,Test_Number_In_File,Line_Number,Implemented_Status,Should,Describe
-.//spec_files,spec.js,Unit test,1,19,Implemented,should have a history,Protractor Demo App

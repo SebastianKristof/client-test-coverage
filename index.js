@@ -34,21 +34,40 @@ fs.writeFile(outFileStats, 'Path,File_Name,Implemented,Necessary,Percentage\n', 
 });    
 
 var percentImplemented = 0, fileFullyImp = 0, filePartiallyImp = 0, fileNotReady = 0, fileWeird = 0;
+var fileNamesArray = [];
 
 glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]}, function (er, fileNames) {
     
-    fileNames.forEach(function(fileName) {
+    fileNamesArray = fileNames;
+
+}).on('end', () => {
+    console.log(`Glob finished`);
+    iterateOverFiles(fileNamesArray, function () {
+    console.log(`Processed ${fileNamesArray.length} files`);
+    //count members of percentImplArray here (100, <100, NaN)
+    console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+});
+    //these guys are not in scope because they are modified from within extractTests()
+    //console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+});
+
+//console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+
+
+
+const iterateOverFiles = (fileNamesArray, callback) => {
+    fileNamesArray.forEach(function(fileName) {
         const rl = readline.createInterface({
             input: fs.createReadStream(fileName)
         });
 
         //separate into path and filename
         var fileNameRelativePath = fileName.replace(workingDir,'./');
-        var fileNamesArray = fileNameRelativePath.split('/');
-        var fileNameOnly = fileNamesArray.pop();
-        var pathWithinDir = fileNamesArray.join('/');
+        var fileNamesSplit = fileNameRelativePath.split('/');
+        var fileNameOnly = fileNamesSplit.pop();
+        var pathWithinDir = fileNamesSplit.join('/');
     
-        //determie test type
+        //determine test type
         var testType = 'Unknown';
         if (fileName.match('comp.spec.js')) {
             testType = 'Component test';
@@ -84,16 +103,8 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
             });
         });
     });
-    console.log(`Glob processed ${fileNames.length} files`);
-    //count members of percentImplArray here (100, <100, NaN)
-    console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
-}).on('end', () => {
-    console.log(`Glob finished`);
-    //these guys are not in scope because they are modified from within extractTests()
-    //console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
-});
-
-//console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+    callback();
+}
 
 
 const extractTests = (rl, fileName, testType, pathWithinDir, fileNameOnly, callback) => {
