@@ -9,7 +9,7 @@ const glob = require("glob");
 const argv = require('yargs')
     .usage('Usage: $0 --dir [starting directory] --out [output file prefix]')
     //.demandOption(['dir','out'])
-    .default ('dir', '~/GitHub/sense-client/web/assets/hldm/')
+    .default ('dir', '.') ///Users/cem/GitHub/sense-client/web/assets/hldm/')
     .default ('out', 'tests_')
     .argv;
 
@@ -33,6 +33,8 @@ fs.writeFile(outFileStats, 'Path,File_Name,Implemented,Necessary,Percentage\n', 
     }
 });    
 
+var percentImplemented = 0, fileFullyImp = 0, filePartiallyImp = 0, fileNotReady = 0, fileWeird = 0;
+
 glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]}, function (er, fileNames) {
     
     fileNames.forEach(function(fileName) {
@@ -53,12 +55,28 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
         } else {
             testType = 'Unit test';
         }
-    
+        //var percentImplArray = [];
         extractTests(rl, fileName, testType, pathWithinDir, fileNameOnly, function (testsInFile){
             //console.log(`${testsInFile.itCount} its and ${testsInFile.ntCount} nts in file ${fileName}`);
             
             //put some counters in here so we get counts of 100%, <100%, and not ready
-            var percentImplemented = (testsInFile.ntCount >= testsInFile.itCount) ? testsInFile.itCount/testsInFile.ntCount*100 : 'nt not ready';
+            // var percentImplemented, fileFullyImp, filePartiallyImp, fileNotReady, fileWeird = 0;
+            if (testsInFile.ntCount === 0 || testsInFile.ntCount < testsInFile.itCount) {
+                percentImplemented = 'not ready';
+                fileNotReady++;
+                console.log(fileNotReady + ' not ready file')
+            } else if (testsInFile.ntCount === testsInFile.itCount) {
+                percentImplemented = 100;
+                fileFullyImp++;
+            } else if (testsInFile.ntCount > testsInFile.itCount) {
+                percentImplemented = testsInFile.itCount/testsInFile.ntCount*100; 
+                filePartiallyImp++;
+            } else {
+                percentImplemented = 'something weird';
+                fileWeird++;
+            }
+             
+            //percentImplArray.push(testsInFile.itCount/testsInFile.ntCount*100);
             fs.appendFile(outFileStats, `${pathWithinDir},${fileNameOnly},${testsInFile.itCount},${testsInFile.ntCount},${percentImplemented}\n`, function (err) {
                 if (err) {
                     return console.log("Error appending file: " + err);
@@ -67,9 +85,16 @@ glob(`${workingDir}/**/*spec.js`, {"ignore":[`${workingDir}/**/node_modules/**`]
         });
     });
     console.log(`Glob processed ${fileNames.length} files`);
+    //count members of percentImplArray here (100, <100, NaN)
+    console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
 }).on('end', () => {
     console.log(`Glob finished`);
+    //these guys are not in scope because they are modified from within extractTests()
+    //console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
 });
+
+//console.log(`of which \n Fully implemented: ${fileFullyImp}\n Partially implemented: ${filePartiallyImp}\n Not ready: ${fileNotReady}\n Weird: ${fileWeird}`);
+
 
 const extractTests = (rl, fileName, testType, pathWithinDir, fileNameOnly, callback) => {
     var lineNumber = 0;
